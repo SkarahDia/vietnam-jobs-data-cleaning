@@ -1,1 +1,29 @@
-
+Vietnam Jobs Dataset — Data Cleaning & EX4
+Dự án thực hiện làm sạch và đánh giá chất lượng bộ dữ liệu tuyển dụng việc làm tại Việt Nam gồm 85.470 bản ghi.
+Files
+Datacleansing.ipynb — Quá trình kiểm tra và làm sạch dữ liệu.
+EX4.ipynb — Phân tích Outliers, Noise và Consistency.
+jobs.csv — Dataset gốc.
+jobs_cleaned.csv — Dataset sau khi làm sạch.
+Original/ — Các file gốc được lưu lại trong quá trình thực hiện.
+Data Cleaning
+Các bước chính:
+Kiểm tra cấu trúc và missing values.
+Chuẩn hóa tên thành phố: 466 → 88 giá trị khác nhau.
+Làm sạch và chuẩn hóa salary.
+Tạo các trường salary_min, salary_max, salary_currency, salary_type và salary_quality.
+Chuẩn hóa format của job_type.
+Giữ lại missing values khi không có đủ thông tin để thay thế đáng tin cậy.
+EX4
+Outlier Detection
+Phân tích salary_max bằng:
+IQR: 5.511 outliers
+Z-score: 1.056 outliers
+Các outliers lớn nhất được kiểm tra lại với dataset gốc trước khi quyết định giữ lại.
+Consistency
+So sánh dữ liệu trước và sau khi cleaning, tập trung vào city và job_type.
+Cleaning Decisions
+Các giá trị bất thường không bị xóa tự động. Quyết định xử lý dựa trên dữ liệu nguồn và khả năng xác định rõ giá trị có thực sự sai hay không.
+Main Principle
+Không phải mọi giá trị bất thường đều là dữ liệu sai.
+Mục tiêu của quá trình cleaning là cải thiện tính nhất quán và khả năng phân tích của dữ liệu mà không đưa ra các giả định không có cơ sở.
